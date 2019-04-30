@@ -37,10 +37,10 @@
             <li class="nav-item">
               <a class="nav-link" href="admin.html">Home <span class="sr-only">(current)</span></a>
             </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link " href="students.html">Students</a>
             </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-            <li class="nav-item active">
+            <li class="nav-item">
             <a class="nav-link " href="faculty.html">Faculty</a>
             </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
               <a class="nav-link" href="index.html">Logout</a>
@@ -56,7 +56,7 @@
   <br>
 <style>
   * {
-  font-famil: 'verdana';
+  font-family: 'verdana';
 }
 table {
   margin-bottom: 15px;
@@ -188,7 +188,7 @@ var addTable = function() {
   checkbox.id= "checkBox";
   var row = document.createElement("tr");
   if((firstname.value!="")&&(lastname.value!="")&&(email.value!="")&&(ticketticketnumber.value!="")){
-  
+    if(confirm("Do you want to save the data ???")){
     table.appendChild(row);
     var cell = document.createElement("td");
   	row.appendChild(cell);
@@ -221,6 +221,10 @@ var addTable = function() {
     
     document.getElementById("details").reset();
 	}
+  else{
+    alert("Nothing saved.")
+  }
+  }
   else {
   	alert("Enter Input Values");
   }
@@ -233,7 +237,8 @@ btnClick.onclick = addTable;
 form.appendChild(btnClick);
 
 function deleteRow() {
-  var tabDel = document.getElementById('myTable');
+  if (confirm("Do you want to delete ??")) {
+    var tabDel = document.getElementById('myTable');
   var rowCount = tabDel.rows.length;
   for(var i=0; i<rowCount; i++) {
     var row = tabDel.rows[i];
@@ -244,6 +249,10 @@ function deleteRow() {
       i--;
     }
 	}
+  } else {
+    alert("Cancelled !!!")
+  }
+
 }
 
 function editCell(e) {
