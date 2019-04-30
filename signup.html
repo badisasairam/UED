@@ -48,10 +48,10 @@
                     </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                     <li class="nav-item active">
                         <a class="nav-link" href="signup.html">Sign Up</a>
-                      </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                      <li class="nav-item">
+                    </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
-                      </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </li> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                 </ul>
 
 
@@ -68,19 +68,37 @@
         <br>
         <br>
         <br>
-        <h1 id="textcolor">Enter your credentials for Signup:</h1>
+        <h3 id="textcolor">Enter your credentials for Signup:</h3>
         <form method="post" onsubmit="validate()" id="form" class="validate">
             <div class="form-field">
                 <label for="full-name" id="textcolor">Full Name</label>
-                <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" required />
+                <input type="text" name="full-name" id="full-name" placeholder="Avengers" required />
             </div>
             <div class="form-field">
                 <label for="email-input" id="textcolor">Email</label>
                 <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
             </div>
             <div class="form-field">
+                <label for="username" id="textcolor">Username</label>
+                <input type="text" name="full-name" id="username" placeholder="tonystark" required />
+            </div>
+            <div class="form-field">
                 <label for="password-input" id="textcolor">Password</label>
                 <input type="password" name="password-input" id="password-input" required />
+            </div>
+            <div class="form-field">
+
+                <label for="form-check-input" id="textcolor">Register as: </label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="textcolor" value="option2">
+                    <label class="form-check-label" for="exampleRadios2" id="textcolor">
+                        Student
+                    </label>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br> <input class="form-check-input" type="radio" name="exampleRadios" id="textcolor" value="option2">
+                    <label class="form-check-label" for="exampleRadios2" id="textcolor">
+                        Faculty
+                    </label>
+                </div>
             </div>
             <div class="form-field">
                 <label for=""></label>
@@ -89,7 +107,7 @@
         </form>
         <script>
             function validate() {
-                window.alert("submit successful")
+                window.alert("Registration successful")
             }
         </script>
         <style>
@@ -142,7 +160,7 @@
                 color: red;
             }
 
-            #textcolor{
+            #textcolor {
                 color: white;
             }
         </style>
