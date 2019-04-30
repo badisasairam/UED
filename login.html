@@ -78,15 +78,16 @@
 				var username = document.getElementById("username").value;
 				var password = document.getElementById("password").value;
 				if (username == "bearcat" && password == "bearcat") {
-
 					window.location = "user.html";
 					return false;
 				}
 				else if (username == "admin" && password == "admin") {
 					window.location = "admin.html";
 					return false;
-				}
-				else {
+				}else if (username == "faculty" && password == "faculty") {
+					window.location = "facultyhome.html";
+					return false;
+				}else {
 					alert("login failed");
 				}
 			}
